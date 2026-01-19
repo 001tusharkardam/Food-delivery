@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Food Delivery Order Manager</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<h1>Online Food Delivery Order Manager</h1>
+
+<div class="container">
+
+    <h2>Add Order</h2>
+    <input type="text" id="orderId" placeholder="Order ID">
+
+    <input type="text" id="restaurantName" placeholder="Restaurant Name">
+    <input type="number" id="itemCount" placeholder="Item Count">
+    <select id="isPaid">
+
+        <option value="false">Unpaid</option>
+        <option value="true">Paid</option>
+
+        
+    </select>
+    <input type="number" id="deliveryDistance" placeholder="Distance (KM)">
+    <button onclick="addOrder()">Add Order</button>
+
+
+
+    <h2>All Orders</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Restaurant</th>
+                <th>Items</th>
+                <th>Paid</th>
+                <th>Distance</th>
+            </tr>
+        </thead>
+
+
+        <tbody id="orderTable"></tbody>
+    </table>
+
+
+
+
+    <h2>Filter & Assign</h2>
+    <select id="filterPaid">
+        <option value="all">All</option>
+        <option value="true">Paid</option>
+        <option value="false">Unpaid</option>
+    </select>
+
+
+    <input type="number" id="maxDistance" placeholder="Max Distance (KM)">
+
+    <button onclick="assignDelivery()">Assign Delivery</button>
+
+    <h3>Output</h3>
+    <p id="output"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
